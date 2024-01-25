@@ -31,7 +31,7 @@ class Menu(models.Model):
 
         verbose_name = "Menu"
         verbose_name_plural = "Menus"
+        ordering = ["id"]
 
     def __str__(self):
-        """Unicode representation of Menu."""
-        return self.title
+        return f"{self.title} : {str(self.price)}"
